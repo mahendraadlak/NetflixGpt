@@ -6,7 +6,7 @@ h1 {
   font-size: 30px !important;
 }
 h2 {
-  font-size: 25px;
+  font-size: 25px !important;
 }
 h3 {
   font-size: 20px;
@@ -17,7 +17,8 @@ h3 {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.Login-page {
+.Login-page,
+.searchinput-page {
   background: url("./assets/images/netflix-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,6 +82,7 @@ h3 {
 .signouty-area {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .signouty-area .logo img {
   width: 110px;
@@ -117,9 +119,67 @@ h3 {
     rgba(0, 0, 0, 0.11) 100%
   );
   padding: 15px 0;
+  z-index: 9;
 }
 .signout button {
   background: transparent;
   color: #fff;
   border: 0;
+}
+.video-bg {
+  position: relative;
+}
+.movie-list,
+.movie-cards {
+  display: flex;
+}
+.movie-cards {
+  overflow: hidden;
+}
+.movie-list {
+  overflow-x: scroll;
+}
+.movie-card {
+  padding: 10px;
+}
+.movie-card-wrap {
+  text-align: left;
+  padding: 15px;
+  color: #fff;
+}
+.browse-page {
+  background: #000;
+}
+.movie-main-wrapper {
+  margin-top: -15%;
+  position: relative;
+}
+.signout,
+.singout-wrap {
+  display: flex;
+}
+button.gpt-btn {
+  background: #2f8ed6;
+  border-radius: 6px;
+  padding: 8px;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 15px;
+}
+.searchinput-page input {
+  padding: 10px;
+  width: 500px;
+  border: 1px solid;
+}
+.searchinput-page button {
+  background: rgb(229, 9, 20);
+  color: #fff;
+}
+.searchinput-page {
+  padding-top: 100px;
+}
+select.lang-select {
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 10px;
 }

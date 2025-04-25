@@ -4,6 +4,7 @@ import USER from "../src/assets/images/userIcon.png";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import GptSearch from "./GptSearch";
 export default function Header() {
   const navigate = useNavigate();
   function handleSingout() {
@@ -25,11 +26,15 @@ export default function Header() {
               <div className="logo">
                 <img src={LOGO} alt="logo" />
               </div>
+              
               <div className="signout">
+                <GptSearch/>
+                <div className="singout-wrap">
                 <img src={USER} alt="User Icon" />
                 <button onClick={handleSingout} className="signout">
                   Sign Out
                 </button>
+                </div>
               </div>
             </div>
           </div>
